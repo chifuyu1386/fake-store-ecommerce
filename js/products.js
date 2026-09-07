@@ -47,6 +47,11 @@ function displayProducts(products) {
 
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
+    filterButtons.forEach(button => {
+      button.classList.remove("active")
+    });
+
+    button.classList.add("active");
 
     const category = button.dataset.category;
 
@@ -62,7 +67,7 @@ filterButtons.forEach(button => {
     })
 
     displayProducts(filteredProducts);
-    
+
   });
 });
 

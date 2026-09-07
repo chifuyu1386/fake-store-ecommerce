@@ -65,3 +65,17 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
+
+.category-filters button.active {
+    background-color: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+
+footer {
+    padding: 30px 0;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}
