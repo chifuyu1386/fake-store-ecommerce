@@ -12,5 +12,21 @@ async function getProducts() {
   return products;
 }
 
-export {getProducts};
+async function getProductById(id) {
+
+  const response = await fetch(`${API_URL}/products/${id}`);
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch product");
+  }
+
+  const product = response.json();
+  return product;
+}
+
+
+export {
+  getProducts,
+  getProductById
+};
 
