@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="container">
+
+            <a href="../index.html" class="logo">
+                FakeStore
+            </a>
+
+            <nav>
+
+                <a href="../index.html">Home</a>
+
+                <a href="./products.html">Products</a>
+
+                <a href="./cart.html">
+                    Cart
+                    <span class="cart-count">0</span>
+                </a>
+
+                <a href="./login.html">Login</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="checkout-page">
+
+            <div class="container">
+
+                <h1>Checkout</h1>
+
+                <div class="checkout-content">
+
+
+                    <form id="checkoutForm" class="checkout-form">
+
+                        <h2>Shipping Information</h2>
+
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="address">
+                                Address
+                            </label>
+
+                            <input
+                                type="text"
+                                id="address"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="city">
+                                    City
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="city"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="postalCode">
+                                    Postal Code
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="postalCode"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button type="submit">
+                            Place Order
+                        </button>
+
+                    </form>
+
+
+                    <div class="checkout-summary">
+
+                        <h2>Order Summary</h2>
+
+                        <div id="checkoutItems">
+                        </div>
+
+                        <div class="checkout-total">
+
+                            <span>Total</span>
+
+                            <span id="checkoutTotal">
+                                $0
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script type="module" src="../js/navbar.js"></script>
+    <script type="module" src="../js/checkout.js"></script>
+
+</body>
+
+</html>
