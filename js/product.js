@@ -8,9 +8,9 @@ const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
 
 async function loadProduct() {
-  try  {
-    const product = await getProductById(productId);
-    productDetails.innerHTML = `
+    try {
+        const product = await getProductById(productId);
+        productDetails.innerHTML = `
             <div class="product-image">
                 <img src="${product.image}" alt="${product.title}">
             </div>
@@ -46,12 +46,13 @@ async function loadProduct() {
         const addToCartButton = document.querySelector(".add-to-cart");
         addToCartButton.addEventListener("click", () => {
             addToCart(product);
+            window.dispatchEvent(new Event("cartUpdated"));
             alert("Product added to cart!");
         });
-        
-  } catch (error) {
-    console.log(error);
-  }
+
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 loadProduct();
