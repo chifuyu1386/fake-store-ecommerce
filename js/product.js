@@ -1,4 +1,6 @@
 import { getProductById } from "./api.js";
+import { addToCart } from "./cart.js";
+
 const productDetails = document.getElementById("productDetails");
 
 const params = new URLSearchParams(window.location.search);
@@ -40,6 +42,13 @@ async function loadProduct() {
 
             </div>
         `;
+
+        const addToCartButton = document.querySelector(".add-to-cart");
+        addToCartButton.addEventListener("click", () => {
+            addToCart(product);
+            alert("Product added to cart!");
+        });
+        
   } catch (error) {
     console.log(error);
   }
